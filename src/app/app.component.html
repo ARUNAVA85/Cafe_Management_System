@@ -1,0 +1,103 @@
+<div *ngIf="!isCustomerLoggedIn && !isAdminLoggedIn">
+    <nz-header class="main-header" nz-row nzType="flex" style="background-color: #14141455;">
+        <div>
+            <a style="color: chocolate; margin-left:78px; font-size: 22px;font-weight: bolder;" routerLink="/login">FoodBar</a>
+            <h6 style="margin-top: -40px; margin-left: 60px; margin-bottom: -10px; color: white;">Your Perfect Food Companion</h6>
+        </div>
+        <div class="nav-links">
+            <a nz-button nzType="link" routerLink="/register" routerLinkActive="active">Sign Up</a>
+            <a nz-button nzType="link" routerLink="/login" routerLinkActive="active">Login</a>
+        </div>
+    </nz-header>
+
+    <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0" class="mobile-sidenav">
+        <ul class="nav-links" nz-menu nzTheme="dark" nzMode="inline">
+            <li nz-menu-item>
+                <a nz-button nzType="link" routerLink="/register" routerLinkActive="active">Sign Up</a>
+            </li>
+            <li nz-menu-item>
+                <a nz-button nzType="link" routerLink="/login" routerLinkActive="active">Login</a>
+            </li>
+
+        </ul>
+    </nz-sider>
+</div>
+
+<div *ngIf="isAdminLoggedIn">
+    <nz-header class="main-header" nz-row nzType="flex" style="background-color: #14141455;">
+        <div>
+            <!-- <a style="color: white; margin-left:50px; font-size: 18px;font-weight: bolder;"
+                routerLink="/admin/dashboard">Restaurant System</a> -->
+                <a style="color: chocolate; margin-left:78px; font-size: 22px;font-weight: bolder;" 
+                routerLink="/admin/dashboard">FoodBar</a>
+                <h6 style="margin-top: -40px; margin-left: 60px; margin-bottom: -10px; color: white;">Your Perfect Food Companion</h6>
+        </div>
+
+            <!-- <form nz-form [formGroup]="validateForm" style="margin-top: 20px; text-align:center;" (submit)="submitForm()">
+                <input nz-input placeholder="Enter Keyword to search" nzSize="large" style="width: 5%; background-color: rgba(255, 255, 255, 0.329);" formControlName="title" />
+                <button nz-button [nzSize]="size" nzType="primary" style="margin-left: 15px; background-color: chocolate; color: white;"
+                    [disabled]="validateForm.invalid">Search</button>
+            </form> -->
+        <div class="nav-links">
+
+            <a nz-button nzType="link" routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</a>
+            <a nz-button nzType="link" routerLink="/admin/category" routerLinkActive="active">Post Category</a>
+            <a nz-button nzType="link" routerLink="/admin/reservations" routerLinkActive="active">Reservation</a>
+            <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Logout</a>
+        </div>
+    </nz-header>
+
+    <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0" class="mobile-sidenav">
+        <ul class="nav-links" nz-menu nzTheme="dark" nzMode="inline">
+            <li nz-menu-item>
+                <a nz-button nzType="link" routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</a>
+            </li>
+            <li nz-menu-item>
+                <a nz-button nzType="link" routerLink="/admin/category" routerLinkActive="active">Post Category</a>
+            </li>
+            <li nz-menu-item>
+                <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Logout</a>
+            </li>
+        </ul>
+    </nz-sider>
+</div>
+
+
+<div *ngIf="isCustomerLoggedIn">
+    <nz-header class="main-header" nz-row nzType="flex" style="background-color: #14141455;">
+        <div>
+            <!-- <a style="color: white; margin-left:50px; font-size: 18px;font-weight: bolder;"
+                routerLink="/customer/dashboard">Restaurant System</a> -->
+
+            <a style="color: chocolate; margin-left:78px; font-size: 22px;font-weight: bolder;" 
+                routerLink="/customer/dashboard">FoodBar</a>
+            <h6 style="margin-top: -40px; margin-left: 60px; margin-bottom: -10px; color: white;">Your Perfect Food Companion</h6>
+        </div>
+        <div class="nav-links">
+            <a nz-button nzType="link" routerLink="/customer/dashboard" routerLinkActive="active">Dashboard</a>
+            <a nz-button nzType="link" routerLink="/customer/reservation" routerLinkActive="active">Reservation</a>
+            <a nz-button nzType="link" routerLink="/customer/my_reservations" routerLinkActive="active">My
+                Reservations</a>
+            <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Logout</a>
+        </div>
+    </nz-header>
+
+    <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0" class="mobile-sidenav">
+        <ul class="nav-links" nz-menu nzTheme="dark" nzMode="inline">
+            <li nz-menu-item>
+                <a nz-button nzType="link" routerLink="/customer/dashboard" routerLinkActive="active">Dashboard</a>
+            </li>
+            <li nz-menu-item>
+                <a nz-button nzType="link" routerLink="/customer/reservation" routerLinkActive="active">Reservation</a>
+            </li>
+            <li nz-menu-item>
+                <a nz-button nzType="link" routerLink="/customer/my_reservations" routerLinkActive="active">My
+                    Reservations</a>
+            </li>
+            <li nz-menu-item>
+                <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Logout</a>
+            </li>
+        </ul>
+    </nz-sider>
+</div>
+<router-outlet></router-outlet>
