@@ -3,11 +3,11 @@
     <button nz-button [nzSize]="size" nzType="primary" style="margin-left: 15px;background-color: chocolate; color: white;"
         [disabled]="validateForm.invalid">Search</button>
 </form>
+<!-- margin-top: -60px; text-align:center; position: fixed; width: 100%; inserted position and width-->
 
+<div style=" min-height: 91vh;"> <!-- class="scroll" -->
 
-<div style=" min-height: 91vh;">
-
-    <div style="padding-top: 10px;"></div>
+    <div style="padding-top: 70px;"></div>  <!-- Made changes from 10 to 70-->
 
     <div style="margin-top:10px;" class="child" *ngFor="let category of categories">
         <div nz-row>
@@ -19,7 +19,7 @@
                 <h2 style="cursor: pointer; color: white;">
                     {{category.name}}</h2>
                 <hr>
-                <h5>Description: <b>{{category.description}}</b></h5>
+                <h3>Description: <b>{{category.description}}</b></h3>
                 <hr>
                 <div style="float: right;">
                     <button nzSize="small" nz-button nzType="primary"

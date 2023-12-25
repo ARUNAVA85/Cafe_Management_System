@@ -6,7 +6,7 @@
       <div class="child">
         <div nz-row class="imgDiv">
           <div nz-col nzSpan="24">
-            <h1 style="margin-left: 100px;">Login</h1>
+            <h1 style="margin-left: 100px;color: aliceblue;">Login</h1>
           </div>
         </div>
         <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
@@ -27,7 +27,7 @@
           <div nz-row class="login-form-margin">
             <div nz-col [nzSpan]="12">
               <label nz-checkbox formControlName="remember">
-                <span>Remember me</span>
+                <span style="color: aliceblue;">Remember me</span>
               </label>
             </div>
             <div nz-col [nzSpan]="12">
@@ -35,7 +35,7 @@
             </div>
           </div>
           <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" style="background-color: chocolate;">Log in</button>
-          Or <a routerLink="/register"> register now! </a>
+          <h4 style="color: aliceblue;">Or <a routerLink="/register"> register now! </a></h4>
         </form>
       </div>
     </div>

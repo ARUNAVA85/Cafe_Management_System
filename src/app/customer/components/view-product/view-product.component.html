@@ -1,6 +1,6 @@
 <form nz-form [formGroup]="validateForm" style="margin-top: 20px; text-align:center;" (submit)="submitForm()">
-    <input nz-input placeholder="Enter Keyword to search" nzSize="large" style="width: 20%;" formControlName="title" />
-    <button nz-button [nzSize]="size" nzType="primary" style="margin-left: 15px;"
+    <input nz-input placeholder="Enter Keyword to search" nzSize="large" style="width: 20%;background-color: rgba(255, 255, 255, 0.329);;" formControlName="title" />
+    <button nz-button [nzSize]="size" nzType="primary" style="margin-left: 15px;background-color: chocolate; color: white;"
         [disabled]="validateForm.invalid">Search</button>
 </form>
 
@@ -19,10 +19,10 @@
                 <h2 style="cursor: pointer; color: #000000;">
                     {{product.name}}</h2>
                 <hr>
-                <h5>Price: <b>{{product.price}}</b>
-                    - Description: <b>{{product.description}}</b>
-                    - Category: <b>{{product.categoryName}}</b>
-                </h5>
+                <h3>Price: <b>{{product.price}}</b>
+                    <br> Description: <b>{{product.description}}</b>
+                    <br> Category: <b>{{product.categoryName}}</b>
+                </h3>
                 <hr>
             </div>
 

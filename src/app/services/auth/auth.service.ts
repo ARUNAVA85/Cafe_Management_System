@@ -12,7 +12,7 @@ export const AUTH_HEADER = 'authorization';
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }  //The HttpClient is used to make HTTP requests to a backend server.
 
   login(loginRequest: any): Observable<any> {
     return this.http.post<[]>(BASIC_URL + "api/auth/login", loginRequest);

@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { DemoNgZorroAntdModule } from './DemoNgZorroAntdModule';
+import { DemoNgZorroAntdModule } from './DemoNgZorroAntdModule'; //we have imported all the ng zorro components that we will need and here we imported that file. we can also impor  the zorro components one by one here also.
 
 registerLocaleData(en);
 
